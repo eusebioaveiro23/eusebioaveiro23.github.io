@@ -1,0 +1,144 @@
+/* Ajustes para la sección Acerca de */
+#about .home__container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    gap: 40px; /* Espacio más grande entre los elementos */
+}
+
+.about-content {
+    max-width: 700px; /* Mayor longitud para el texto */
+}
+
+#about .home__title {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+#about .home__description {
+    font-size: 1rem;
+    color: #666;
+    margin-bottom: 2rem; /* Espacio mayor debajo del texto */
+}
+
+.home__subtitle {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    text-align: left;
+    width: 100%; /* Alineado al 100% de la pantalla */
+}
+
+/* Espacio entre el título y los valores */
+.home__values {
+    list-style: disc;
+    padding-left: 20px;
+    margin-left: 20px;
+    text-align: left;
+    margin-top: 20px; /* Aumentamos el margen superior para bajarlo un poco más */
+    margin-bottom: 30px; /* Espacio extra entre los valores */
+}
+
+.home__values li {
+    margin-bottom: 15px;
+    padding-left: 10px; /* Más espacio antes del texto de cada valor */
+}
+
+/* Imagen centrada */
+.img-container-custom {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 30px; /* Espacio extra debajo de la imagen */
+}
+
+.home__img {
+    max-width: 100%;
+    height: auto;
+    border-radius: 8px;
+    width: 350px; /* Imagen más grande */
+}
+
+/* Alineación de la sección y texto debajo de la imagen */
+.home__data {
+    margin-top: 30px; /* Aumenta el espacio entre la imagen y el texto */
+}
+
+
+/* Estilos generales */
+.history__title {
+    font-size: 2.5rem;
+    text-align: center;
+    margin-top: 50px; /* Eleva el título */
+    margin-bottom: 20px;
+}
+
+.history__subtitle {
+    font-size: 1.2rem;
+    text-align: center;
+    color: #777;
+    margin-bottom: 40px;
+}
+
+/* Estilos de la línea de tiempo */
+.timeline {
+    position: relative;
+    padding: 0 20px; /* Reduce el espacio en los laterales */
+    margin-top: 20px; /* Ajusta la posición de la línea de tiempo hacia arriba */
+}
+
+/* Contenedor de los elementos de la línea de tiempo */
+.timeline__item {
+    display: flex;
+    align-items: center;
+    margin-bottom: 40px;
+    justify-content: center;
+}
+
+/* Estilo para la fecha */
+.timeline__date {
+    width: 120px;
+    text-align: center;
+    font-size: 1.5rem;
+    font-weight: bold;
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Estilo para el contenido de la línea de tiempo */
+.timeline__content {
+    margin-left: 20px;
+    flex-grow: 1;
+    padding: 20px;
+    background-color: #f4f4f4;
+    border-radius: 10px;
+    box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+    text-align: center;
+}
+
+/* Título dentro del contenido */
+.timeline__content h3 {
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+}
+
+/* Párrafo dentro del contenido */
+.timeline__content p {
+    font-size: 1rem;
+    color: #555;
+    margin-bottom: 0;
+}
+
+/* Ajuste del contenedor para mantener la línea de tiempo más arriba */
+.timeline__container {
+    max-width: 1000px;
+    margin: 0 auto;
+}
+
+.store {
+    position: relative;
+    top: -20px; /* Mueve el contenido hacia arriba */
+}

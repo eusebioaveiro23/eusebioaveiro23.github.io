@@ -1,0 +1,227 @@
+:root {
+    --header-height: 3.5rem;
+  
+    /*========== Colors ==========*/
+    /*Color mode HSL(hue, saturation, lightness)*/
+    --first-color: hsl(219, 69%, 56%);
+    --first-color-alt: hsl(219, 69%, 52%);
+    --title-color: hsl(219, 8%, 95%);
+    --text-color: hsl(219, 8%, 75%);
+    --text-color-light: hsl(219, 4%, 55%);
+    --white-color: #fff;
+    --body-color: hsl(219, 4%, 4%);
+    --container-color: hsl(219, 4%, 7%);
+  
+    /*========== Font and typography ==========*/
+    /*.5rem = 8px | 1rem = 16px ...*/
+    --body-font: 'Exo', sans-serif;
+    --h1-font-size: 1.5rem;
+    --h2-font-size: 1.25rem;
+    --h3-font-size: 1rem;
+    --normal-font-size: .938rem;
+    --small-font-size: .813rem;
+    --smaller-font-size: .75rem;
+  
+    /*========== Font weight ==========*/
+    --font-medium: 500;
+    --font-semi-bold: 600;
+  
+    /*========== z index ==========*/
+    --z-tooltip: 10;
+    --z-fixed: 100;
+  }
+  
+
+
+
+.video-container{
+    display: flex;
+    align-items: center;
+}
+
+video{
+    max-width: 70%;
+    height: auto;
+}
+
+.video-text{
+    margin-left: 20px;
+    max-width: 50%;
+}
+.video-container-custom {
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    flex-direction: row;
+}
+
+.video-lambo {
+    display: flex;
+    align-items: center;
+    gap: 20px; /* Espaciado entre el video y el texto */
+}
+
+.lambo-video {
+    max-width: 30%; /* Ajusta el tamaño del video */
+    height: auto;
+}
+
+.video-text1 {
+    margin-left: 20px; /* Espaciado adicional entre video y texto */
+    max-width: 50%;
+    text-align: left;
+    line-height: 1.5; /* Espaciado entre líneas de texto */
+}
+
+.button-custom,
+.button-custom2{
+    display: inline-block;
+    background-color: var(--first-color);
+    color: var(--white-color);
+    padding: 1rem 2rem;
+    border-radius: .25rem;
+    font-size: var(--normal-font-size);
+    transition: .3s;
+}
+
+.button-custom:hover{
+    background-color: var(--first-color-alt);
+}
+
+/* Estilos del modal (ventana emergente) */
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.5);
+}
+
+.modal-content {
+    background-color: #000000;
+    margin: 15% auto;
+    padding: 20px;
+    border: 1px solid #888;
+    width: 80%;
+    max-width: 400px;
+}
+
+.close {
+    color: #000000;
+    font-size: 28px;
+    font-weight: bold;
+    float: right;
+}
+
+.close:hover,
+.close:focus {
+    color: black;
+    text-decoration: none;
+    cursor: pointer;
+}
+
+/* Estilo del formulario */
+form {
+    display: flex;
+    flex-direction: column;
+}
+
+form input {
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+form button {
+    background-color: var(--first-color);
+    color: white;
+    padding: 10px;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+form button:hover {
+    background-color: var(--first-color-alt);
+}
+
+/* Estilo para el icono de la tarjeta */
+.card-input {
+    position: relative;
+    display: flex;
+    align-items: center;
+}
+
+#cardNumber {
+    width: 100%;
+    padding: 10px;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+}
+
+.card-icon {
+    position: absolute;
+    right: 10px;
+    top: 50%;
+    transform: translateY(-50%);
+    font-size: 24px;
+}
+
+/* Colores para cada tipo de tarjeta */
+.card-icon .fa-cc-visa {
+    color: #1A1F71; /* Azul oscuro para Visa */
+}
+
+.card-icon .fa-cc-mastercard {
+    color: #FF5F00; /* Naranja para MasterCard */
+}
+
+.card-icon .fa-cc-amex {
+    color: #0072CE; /* Azul para American Express */
+}
+
+.card-icon .fa-cc-discover {
+    color: #FF7F32; /* Naranja para Discover */
+}
+
+.card-icon .fa-cc-jcb {
+    color: #00A859; /* Verde para JCB */
+}
+
+
+
+
+/* Media Query para pantallas pequeñas */
+@media (max-width: 768px) {
+    .video-container-custom {
+        flex-direction: column; /* Cambiar la dirección a columna */
+        align-items: center; /* Centra el contenido */
+        gap: 15px; /* Reduce el espacio entre los elementos */
+    }
+
+    .video-lambo {
+        display: flex;
+        flex-direction: column; /* Cambia el orden del contenido: video arriba, texto abajo */
+        align-items: center; /* Centra el video y el texto */
+    }
+
+    .video-lambo video {
+        max-width: 100%; /* El video ocupará todo el ancho en pantallas pequeñas */
+    }
+
+    .video-text1 {
+        margin-left: 0; /* Eliminar margen izquierdo */
+        max-width: 90%; /* El texto ocupa un 90% en pantallas pequeñas */
+        text-align: center; /* Centra el texto */
+    }
+
+    .button-custom,
+    .button-custom2 {
+        font-size: 1rem; /* Ajusta el tamaño del botón en pantallas pequeñas */
+        padding: 1rem 3rem; /* Ajusta el tamaño del botón */
+    }
+}

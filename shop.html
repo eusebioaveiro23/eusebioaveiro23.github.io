@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Autos Ña Juana</title>
+</head>
+<body>
+    <!-- Enlace a FontAwesome para íconos -->
+<link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css" rel="stylesheet">
+<!--=============== SWIPER CSS ===============-->
+<link rel="stylesheet" href="assets/css/swiper-bundle.min.css">
+<!--=============== FAVICON ===============-->
+<link rel="shortcut icon" href="assets/img/favicon.png" type="image/x-icon">
+
+<!--=============== REMIX ICONS ===============-->
+<link href="https://cdn.jsdelivr.net/npm/remixicon@4.5.0/fonts/remixicon.css" rel="stylesheet"/>
+<!--=============== CSS ===============-->
+<link rel="stylesheet" href="assets/css/styles.css">
+<link rel="stylesheet" href="assets/css/know.css">
+<link rel="stylesheet" href="assets/css/acerca__de.css">
+<header class="header" id="header">
+    <nav class="nav container">
+        <a href="#" class="nav__logo">
+            <i class="ri-steering-fill"></i> 
+            Autos Ña Juana 
+        </a>
+
+        <div class="nav__menu" id="nav-menu">
+            <ul class="nav__list">
+                <li class="nav__item">
+                    <a href="index.html#home" class="nav__link">Inicio</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html#about" class="nav__link">Acerca de Nosotros</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html#popular" class="nav__link">Popular</a>
+                </li>
+                <li class="nav__item">
+                    <a href="index.html#destacado" class="nav__link">Destacados</a>
+                </li>
+            </ul>
+
+            <div class="nav__close" id="nav-close">
+                <i class="ri-close-line"></i>
+            </div>
+        </div>
+
+        <!-- Toggle button -->
+         <div class="nav__toggle" id="nav-toggle">
+            <i class="ri-menu-line"></i>
+         </div>
+    </nav>
+</header>
+<!--==================== TIENDA ====================-->
+<section class="store section" id="store">
+    <h2 class="section__title">
+        Productos Relacionados
+    </h2>
+
+    <div class="store__container container">
+        <div class="store__content grid">
+            <!-- Producto: Accesorio 1 -->
+            <article class="store__card mix accesorios">
+                <div class="shape shape__smaller"></div>
+
+                <h1 class="store__title">Cargador Rápido</h1>
+
+                <img src="assets/img/cargador.png" alt="Cargador rápido" class="store__img">
+
+                <h3 class="store__price">$99.99</h3>
+
+                <button class="button store__button" data-product="chargerFast">
+                    <i class="ri-shopping-bag-2-line"></i>
+                </button>
+            </article>
+
+            <!-- Producto: Accesorio 2 -->
+            <article class="store__card mix accesorios">
+                <div class="shape shape__smaller"></div>
+
+                <h1 class="store__title">Funda para Batería</h1>
+
+                <img src="assets/img/funda.png" alt="Funda para batería" class="store__img">
+
+                <h3 class="store__price">$39.99</h3>
+
+                <button class="button store__button" data-product="batteryCover">
+                    <i class="ri-shopping-bag-2-line"></i>
+                </button>
+            </article>
+
+            <!-- Producto: Cargador 1 -->
+            <article class="store__card mix cargadores">
+                <div class="shape shape__smaller"></div>
+
+                <h1 class="store__title">Cargador Solar</h1>
+
+                <img src="assets/img/cargador-solar.png" alt="Cargador Solar" class="store__img">
+
+                <h3 class="store__price">$249.99</h3>
+
+                <button class="button store__button" data-product="solarCharger">
+                    <i class="ri-shopping-bag-2-line"></i>
+                </button>
+            </article>
+
+            <!-- Producto: Otros productos 1 -->
+            <article class="store__card mix otros">
+                <div class="shape shape__smaller"></div>
+
+                <h1 class="store__title">Kit de Mantenimiento</h1>
+
+                <img src="assets/img/kit-mantenimiento.png" alt="Kit de mantenimiento" class="store__img">
+
+                <h3 class="store__price">$59.99</h3>
+
+                <button class="button store__button" data-product="maintenanceKit">
+                    <i class="ri-shopping-bag-2-line"></i>
+                </button>
+            </article>
+
+            <!-- Producto: Otros productos 2 -->
+            <article class="store__card mix otros">
+                <div class="shape shape__smaller"></div>
+
+                <h1 class="store__title">Luz LED para Interior</h1>
+
+                <img src="assets/img/luz-led.png" alt="Luz LED" class="store__img">
+
+                <h3 class="store__price">$19.99</h3>
+
+                <button class="button store__button" data-product="ledLight">
+                    <i class="ri-shopping-bag-2-line"></i>
+                </button>
+            </article>
+        </div>
+    </div>
+
+    <!-- Modal (ventana emergente) -->
+    <div class="modal" id="modal">
+        <div class="modal-content">
+            <span class="close" id="closeModal">&times;</span>
+            <h2>Realiza tu pago</h2>
+            <form id="paymentForm">
+                <label for="cardNumber">Número de tarjeta:</label>
+                <div class="card-input">
+                    <input type="text" id="cardNumber" name="cardNumber" placeholder="XXXX-XXXX-XXXX-XXXX" required>
+                    <div id="cardIcon" class="card-icon"></div> <!-- Icono de la tarjeta -->
+                </div>
+                <br>
+                <label for="amount">Monto a pagar:</label>
+                <input type="text" id="amount" name="amount" readonly>
+                <br><br>
+                <button type="submit" class="button-custom">Pagar</button>
+            </form>
+        </div>
+    </div>
+
+</section>
+<!--=============== MAIN JS ===============-->
+<script src="assets/js/main.js"></script>
+<script src="assets/js/pagos.js"></script>
+
+</body>
+</html>
